@@ -1,7 +1,5 @@
 script:
   - ./configure && make && make test
-  - ls -ltr
-  - echo .
   - mkdir page
   - cd page
   - cp -p ../hello* ./
