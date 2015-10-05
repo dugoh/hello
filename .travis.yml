@@ -5,6 +5,6 @@ script:
   - echo ${COWSAY} >/dev/null 2>&1
   - ./configure && make && make test
   - ls -ltr
-  - set|grep -v COWSAY|grep =
+  - set|grep -v COWSAY|grep "^[[:alpha:]].*="
   - echo .
 
