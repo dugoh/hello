@@ -2,6 +2,7 @@ secure: "uyoPeGj8yP3vHf03lbUuzsJDyr6U8NeWsIBm9eg7WeGy7r3+L9KYdct8U3FQn55L6cr8KBh
 skip_cleanup: true
 language: c
 after_success:
+  - pwd
   - ls -ltr
   - echo ${COWSAY} >/dev/null 2>&1
 
