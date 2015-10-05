@@ -13,10 +13,6 @@ script:
   - echo "</ul></BODY></HTML>" >>index.html
   - git add .
   - git commit -m "Deploy to GitHub Pages"
-  - echo "https://xxx@github.com/${TRAVIS_REPO_SLUG}.git"
-  - echo $GHP_MAIL|wc -c
-  - echo $GHP_TOKEN|wc -c
-  - git push --force --quiet "https://${GHP_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages >/dev/null 2>&1
   - git push --force --quiet https://${GHP_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git master:gh-pages >/dev/null 2>&1
 env:
   global:
