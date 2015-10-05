@@ -1,5 +1,6 @@
-language: c
 secure: "uyoPeGj8yP3vHf03lbUuzsJDyr6U8NeWsIBm9eg7WeGy7r3+L9KYdct8U3FQn55L6cr8KBh979dulkH1/9YzKDEukuvSYLa0b6Ngh+aAGUcQN6SHXtWPSvTV4F+9tO+GaZGPRJZNdxGm73FS/7S75+hcHn8Bov/CIp5dP369RgVA8TcSAHLfdkOakKPXKFh/3+3SOoV9xVgZYHqSiGjsmken3CKDR9Q+Fl+iKgmGpTpN3qLQZPoWM1kRZnQlMX2FekB4BfFbqK+2sCp7uqhs3F/6MXEgbCTVVc6GBIZWfnFNy3oHxQYZ+2b6zlRscZRCI2e+DS078+TfeyHdz+UlU7LeXgaOxHMf3fzl9az1n49CP1E6VEGUB5r8tb69CLuZsbd/zu+TBqZCWr2NVJEQgOSnAJ9qb4u+kp+OB1srWhICSF/8Foo3Zv9sOr7MPrVkhDLd+mHU3tsLIFxJJY4Pa5y90v3o8YRBrl9fcL75qpx9dP4o5oKKjIErDh3LFzTq92BJp1F28VtI+O3U8YmdV+mOnYrQY6t/Y/jTquHgpNKjR/vXUCXFGhQeyKJkNizOfVrU0fb/2fcrCweXiawUG06vTJQlnIs86t/OrZu2k0WCX32BLr75XqeE4wtd1lcrjx/+1kMn31d9KWTOCtDHLwryh8+7yLiggiCmAW/vSfw="
+skip_cleanup: true
+language: c
 after_success:
   - ls -ltr
   - echo ${COWSAY} >/dev/null 2>&1
