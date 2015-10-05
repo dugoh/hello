@@ -1,10 +1,19 @@
-secure: "uyoPeGj8yP3vHf03lbUuzsJDyr6U8NeWsIBm9eg7WeGy7r3+L9KYdct8U3FQn55L6cr8KBh979dulkH1/9YzKDEukuvSYLa0b6Ngh+aAGUcQN6SHXtWPSvTV4F+9tO+GaZGPRJZNdxGm73FS/7S75+hcHn8Bov/CIp5dP369RgVA8TcSAHLfdkOakKPXKFh/3+3SOoV9xVgZYHqSiGjsmken3CKDR9Q+Fl+iKgmGpTpN3qLQZPoWM1kRZnQlMX2FekB4BfFbqK+2sCp7uqhs3F/6MXEgbCTVVc6GBIZWfnFNy3oHxQYZ+2b6zlRscZRCI2e+DS078+TfeyHdz+UlU7LeXgaOxHMf3fzl9az1n49CP1E6VEGUB5r8tb69CLuZsbd/zu+TBqZCWr2NVJEQgOSnAJ9qb4u+kp+OB1srWhICSF/8Foo3Zv9sOr7MPrVkhDLd+mHU3tsLIFxJJY4Pa5y90v3o8YRBrl9fcL75qpx9dP4o5oKKjIErDh3LFzTq92BJp1F28VtI+O3U8YmdV+mOnYrQY6t/Y/jTquHgpNKjR/vXUCXFGhQeyKJkNizOfVrU0fb/2fcrCweXiawUG06vTJQlnIs86t/OrZu2k0WCX32BLr75XqeE4wtd1lcrjx/+1kMn31d9KWTOCtDHLwryh8+7yLiggiCmAW/vSfw="
+secure: "m9CaQgVQNx7C87aEM8Zn0nhiBcVvPCQI/9cO3/AK796cg7vcGF7JIuljsgYnQO5b6h2GuA5ZKSsJR7tG67sqiPUILRIfLuL3OmIdlkQvkWZ1Qix3CDw+JvvPha+vy5YbmIEp+qqEQUaCgahDets9t4Cjelef8JjqGqltNB+LJM2Udwy3EMs4fbVwBdaNvjo+WgvvNRV+PhO67STuwGtmhoxMsVTZcbF+EdpWjWj0p3IKmvtCbA7EE94tO5Dd18XJsRj8TlvSKhYSGAo64i9lO5YvjX2dRQ8Gybyjntr6FZ+rsiyvALM7N9HANWXgZdCEOYdRQf0LBWd8gXRqMlCSNybV5fAfFeF5tiGFdCE3+S8xXSLpvSLl+gYxs/XQgu30iFiHe7NxjiGrLdNnygvS+/2jmfcfgFnwuL3kBgIAc5Mrexvov24HnRHNlaEHGPhnitJqNCl3XGnHj4672suLNp3UqoChYEPNuQXPECXHp+yC0rfCmwk5mJCP/PpzfshuQ8h8ERfKxuxu+lmS4Bd5uobwDRLY6xwSmD6+vF3j9zbpFTNx5h5HpcWe5226VLm3dxvRkmdq7wCohKEfBqb6cTiW7nZRWJSkxBkFTjpG4FtvN8IazROnqLTC4eDTM8CvtODzX46haMHwNKMLpPvZZhE6M78b17dL1fNOWadCAPE="
+secure: "JY4b5xVTwukGza7kypVA408f+8f5qS1nriq7btYWCEcRKqvrw7G8RGhr20NfAa2spAQBZ8lzVSZdV62qDi0rjEl1MiXVBR38tPFXfIVOaP1lmajfU4S0HIJ9E4xi+TdM0RAr+sZ8DP+Fvl8pUNcPoERwScjhlmQ1dJBIKus+ZOkpxFiQZlHqbLQ9hLgnpKHT/V3xsIxTILJzQfb1TKqjtVtp32KvLNkhK7EFUUdQAwUdYVl3HcTK74HUpHMutz6Y3JQILkDjHEdjjnjY+VvC0DEzj42pQ55JCBfddjWfZUJg9/z3ytvCB2QcfqI5AQghSAhECVnzsb9clheJfbMet83yJLvPiYjxQWiXY2ZVw4evWQwCpz8Bd9HNUZfj46JBhKAz4j3669dbtpg/VkgCl2BzQlx4VQ6mPuFXXJlLHvyE7c5IQiPefaehYuGs7+GV6u4RgABhE22ShDdvYGNYX/lR/BpN3ywKrGY8TZ2gNvMnhKyxs8nj/FKkrKYTcc7uE4LpkoZpPJCNIEGaHUQMLZ4LTK5UDCKOBMpDk6tAiVpAKzuvpigXIqgR++F3KqFeMkXHiMHK8MsHJEmpyouQNQ9AMOcK4V4l7buKWxkyB0UJaN4GX21pPz8ZpIP+rBXI7oR+KXRa2WWWRsXFwz8d/8hW8YRqf8p2bLO+Qp7aDTY="
 script:
-  - pwd
-  - ls -ltr
-  - echo ${COWSAY} >/dev/null 2>&1
   - ./configure && make && make test
   - ls -ltr
-  - set|grep -v COWSAY|grep "^[[:alpha:]].*="
   - echo .
+  - mkdir page
+  - cd page
+  - cp -p ../hello* ./
+  - git init
+  - git config user.name "${USER}"
+  - git config user.email "${GHP_MAIL}"
+  - echo "<HTML><HEAD><TITLE>LINKS</TITLE></HEAD><BODY><ul>" >index.html
+  - for file in $(ls|grep -v index.html); do (printf '<li><a href="' ; printf "${file}" ; printf '">' ; printf "${file}" ; printf '</a></li>\n') >>index.html ; done
+  - echo "</ul></BODY></HTML>" >>index.html
+  - git add .
+  - git commit -m "Deploy to GitHub Pages"
+  - git push --force --quiet "https://${GHP_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages >/dev/null 2>&1
 
