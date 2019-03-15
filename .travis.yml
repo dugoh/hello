@@ -1,6 +1,8 @@
 script:
   - which fakeroot
   - which svn
+  - svn checkout svn://svn.code.sf.net/p/bochs/code/trunk bochs-code
+  - find ./
   - ./configure && make && make test
   - mkdir page
   - cd page
