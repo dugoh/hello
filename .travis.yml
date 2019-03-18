@@ -1,6 +1,6 @@
 os: osx
 script:
-  - sudo mkdir for i in a b c ; do wget -O - https://dugoh.github.io/386bsd0.1/disk.part-a${i} ; done|bunzip2 >disk.img
+  - for i in a b c; do wget -O - https://dugoh.github.io/386bsd0.1/disk.part-a${i}; done|bunzip2 >disk.img
   - sudo mv disk.img /var/root/
   - sudo hdiutil attach -imagekey diskimage-class=CRawDiskImage -nomount filename /var/root
   - echo
