@@ -3,6 +3,9 @@ script:
   - for i in a b c; do wget -O - https://dugoh.github.io/386bsd0.1/disk.part-a${i}; done|bunzip2 >disk.img
   - sudo mv disk.img /var/root/
   - sudo hdiutil attach -imagekey diskimage-class=CRawDiskImage -nomount /var/root/disk.img
+  - sudo mkdir /Volumes/m00
+  - sudo mount -t ufs /dev/disk1 /Volumes/m00
+  - sudo find /Volumes/m00
   - echo
   - echo ====
   - echo
