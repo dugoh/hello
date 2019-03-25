@@ -1,6 +1,16 @@
 os: linux
+dist: trusty
+sudo: required
+addons:
+  apt:
+    packages:
+    - bochs-term
+    - qemu
 script:
   - echo master
+  - qemu --help
+  - echo
+  - find / |grep -i qemu
   - #for i in a b c; do wget -O - https://dugoh.github.io/386bsd0.1/disk.part-a${i}; done|bunzip2 >disk.img
   - #sudo mv disk.img /var/root/
   - #sudo hdiutil attach -imagekey diskimage-class=CRawDiskImage -nomount /var/root/disk.img
