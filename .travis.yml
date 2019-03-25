@@ -9,6 +9,7 @@ addons:
 script:
   - echo master
   - qemu --help
+  - qemu-i386 --help
   - echo
   - find / |grep -i qemu
   - #for i in a b c; do wget -O - https://dugoh.github.io/386bsd0.1/disk.part-a${i}; done|bunzip2 >disk.img
