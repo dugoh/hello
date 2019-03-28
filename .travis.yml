@@ -8,6 +8,11 @@ addons:
     - qemu
 script:
   - echo master
+  - sudo apt-add-repository -y ppa:zanchey/asciinema
+  - sudo apt-get update -o Dir::Etc::sourcelist=/etc/apt/sources.list.d/zanchey-asciinema-trusty.list
+  - sudo apt-get -y install asciinema
+  - asciinema rec -c 'bash -c "echo t3st; sleep 2; echo ok"' "/tmp/1a.cast"
+  - grep '"o",' "/tmp/1a.cast"
   - qemu --help
   - qemu-i386 --help
   - qemu-i386 -cpu help
