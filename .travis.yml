@@ -11,6 +11,7 @@ addons:
 script:
   - stty -a
   - echo master
+  - which unbuffer
   - #pip --version
   - #pip3 --version
   - #python --version
