@@ -1,6 +1,7 @@
 os: linux
 dist: xenial
 sudo: required
+language: python
 python:
   - "3.7"
 addons:
@@ -11,6 +12,8 @@ addons:
 script:
   - echo master
   - pip --version
+  - pip3 --version
+  - python --version
   - sudo pip3 install asciinema
   - #sudo apt-add-repository -y ppa:zanchey/asciinema
   - #sudo apt-get update -o Dir::Etc::sourcelist=/etc/apt/sources.list.d/zanchey-asciinema-trusty.list
