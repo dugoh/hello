@@ -10,6 +10,7 @@ addons:
     - "python3-pip"
 script:
   - stty -a
+  - df -h
   - echo master
   - which unbuffer
   - #pip --version
