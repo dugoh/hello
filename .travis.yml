@@ -1,18 +1,19 @@
-os: linux
-dist: trusty
-sudo: required
-addons:
-  apt:
-    packages:
-    - bochs-term
-    - qemu
-    - "python3"
-    - "python3-pip"
+#os: linux
+os: windows
+#dist: trusty
+#sudo: required
+#addons:
+#  apt:
+#    packages:
+#    - bochs-term
+#    - qemu
+#    - "python3"
+#    - "python3-pip"
 script:
   - stty -a
   - df -h
   - echo master
-  - which unbuffer
+  - NOTEPAD.EXE
   - #pip --version
   - #pip3 --version
   - #python --version
@@ -22,11 +23,11 @@ script:
   - #sudo apt-get -y install asciinema
   - #asciinema rec -c 'bash -c "echo t3st; sleep 2; echo ok"' "/tmp/1a.cast"
   - #grep '"o",' "/tmp/1a.cast"
-  - qemu --help
-  - qemu-i386 --help
-  - qemu-i386 -cpu help
+  - #qemu --help
+  - #qemu-i386 --help
+  - #qemu-i386 -cpu help
   - echo
-  - find / |grep -i qemu
+  - #find / |grep -i qemu
   - #for i in a b c; do wget -O - https://dugoh.github.io/386bsd0.1/disk.part-a${i}; done|bunzip2 >disk.img
   - #sudo mv disk.img /var/root/
   - #sudo hdiutil attach -imagekey diskimage-class=CRawDiskImage -nomount /var/root/disk.img
@@ -37,16 +38,16 @@ script:
   - #echo ====
   - #echo
   - #sudo diskutil list
-  - ./configure && make && make test
-  - mkdir page
-  - cd page
-  - cp -p ../hello* ./
-  - git init
-  - git config user.name "${USER}"
-  - git config user.email "${GHP_MAIL}"
-  - echo "<HTML><HEAD><TITLE>LINKS</TITLE></HEAD><BODY><ul>" >index.html
-  - for file in $(ls|grep -v index.html); do (printf '<li><a href="' ; printf "${file}" ; printf '">' ; printf "${file}" ; printf '</a></li>\n') >>index.html ; done
-  - echo "</ul></BODY></HTML>" >>index.html
-  - git add .
-  - git commit -m "Deploy to GitHub Pages"
-  - git push --force --quiet https://${GHP_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git master:gh-pages >/dev/null 2>&1
+  - #./configure && make && make test
+  - #mkdir page
+  - #cd page
+  - #cp -p ../hello* ./
+  - #git init
+  - #git config user.name "${USER}"
+  - #git config user.email "${GHP_MAIL}"
+  - #echo "<HTML><HEAD><TITLE>LINKS</TITLE></HEAD><BODY><ul>" >index.html
+  - #for file in $(ls|grep -v index.html); do (printf '<li><a href="' ; printf "${file}" ; printf '">' ; printf "${file}" ; printf '</a></li>\n') >>index.html ; done
+  - #echo "</ul></BODY></HTML>" >>index.html
+  - #git add .
+  - #git commit -m "Deploy to GitHub Pages"
+  - #git push --force --quiet https://${GHP_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git master:gh-pages >/dev/null 2>&1
