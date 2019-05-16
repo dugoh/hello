@@ -1,5 +1,6 @@
 #os: linux
 os: windows
+language: bash
 #dist: trusty
 #sudo: required
 #addons:
