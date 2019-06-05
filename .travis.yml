@@ -1,17 +1,17 @@
-os:
-  - linux
-  - osx
-  - windows
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+    - os: linux
+      dist: xenial
+    - osx
+    - windows
 language: c
 
-dist:
-  - trusty
 env:
-  matrix:
   - MOO=BOO
-    dist: xenial
   - MOO=BEH
-    dist: xenial
 script:
   - echo $MOO  
   
