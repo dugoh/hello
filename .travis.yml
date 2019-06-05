@@ -1,16 +1,24 @@
-
 matrix:
   include:
     - os: linux
       dist: trusty
-      env: OS=linux-trusty
+      env:
+        global:
+        - OS=linux-trusty
     - os: linux
       dist: xenial
-      env: OS=linux-xenial
+      env:
+        global:
+        - OS=linux-xenial
     - os: osx
-      env: OS=osx
+      env:
+        global:
+        - OS=osx
     - os: windows
-      env: OS=windows
+      env:
+        global:
+        - OS=windows
+
 language: c
 
 env:
