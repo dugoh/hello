@@ -1,17 +1,19 @@
-language: c
-
 matrix:
   include:
     - os: linux
       dist: trusty
+      language: a
     - os: linux
       dist: xenial
+      language: b
     - os: osx
     language: notc
     - os: windows
+      language: d
+
 
 env:
-  - MOO=BOO$TRAVIS_OS_NAME$TRAVIS_DIST
+  - MOO=BOO
   - MOO=BEH
 script:
   - echo $MOO $OS
