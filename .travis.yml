@@ -11,7 +11,7 @@ matrix:
 language: c
 
 env:
-  - MOO=BOO OS=$TRAVIS_OS_NAME$TRAVIS_DIST
+  - MOO=BOO$TRAVIS_OS_NAME$TRAVIS_DIST
   - MOO=BEH
 script:
   - echo $MOO $OS
