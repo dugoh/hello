@@ -1,11 +1,12 @@
 os:
   - linux
+    dist:
+      - trusty
+      - xenial
   - osx
   - windows
 language: c
-dist:
-  - trusty
-  - xenial
+
 env:
   matrix:
   - MOO=BOO
