@@ -1,27 +1,20 @@
 matrix:
   include:
     - os: linux
-      dist: trusty
-      env:
-        - OS=linux-trusty
+        dist: trusty
     - os: linux
-      dist: xenial
-      env:
-        - OS=linux-xenial
+        dist: xenial
     - os: osx
-      env:
-        - OS=osx
     - os: windows
-      env:
-        - OS=windows
+    
 
 language: c
 
 env:
-  - MOO=BOO
+  - MOO=BOO OS=$TRAVIS_OS_NAME$TRAVIS_DIST
   - MOO=BEH
 script:
-  - echo $MOO  
+  - echo $MOO $OS
   - set
 #os: linux
 #os: windows
