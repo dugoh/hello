@@ -3,10 +3,14 @@ matrix:
   include:
     - os: linux
       dist: trusty
+      env: OS=linux-trusty
     - os: linux
       dist: xenial
+      env: OS=linux-xenial
     - os: osx
+      env: OS=osx
     - os: windows
+      env: OS=windows
 language: c
 
 env:
