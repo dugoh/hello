@@ -2,15 +2,10 @@ matrix:
   include:
     - os: linux
       dist: trusty
-      language: a
     - os: linux
       dist: xenial
-      language: b
     - os: osx
-    language: notc
     - os: windows
-      language: d
-
 
 env:
   - MOO=BOO
@@ -18,6 +13,7 @@ env:
 script:
   - echo $MOO $OS
   - set
+
 #os: linux
 #os: windows
 #language: bash
