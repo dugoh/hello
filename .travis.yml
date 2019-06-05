@@ -1,14 +1,18 @@
 matrix:
   include:
     - os: linux
-        dist: trusty
+      dist: trusty
+      language: a
     - os: linux
-        dist: xenial
+      dist: xenial
+      language: b
     - os: osx
+    language: notc
     - os: windows
+      language: d
     
 
-language: c
+
 
 env:
   - MOO=BOO$TRAVIS_OS_NAME$TRAVIS_DIST
