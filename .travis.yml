@@ -5,8 +5,8 @@ matrix:
       dist: trusty
     - os: linux
       dist: xenial
-    - osx
-    - windows
+    - os: osx
+    - os: windows
 language: c
 
 env:
