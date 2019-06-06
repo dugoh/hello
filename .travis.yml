@@ -9,10 +9,10 @@ env:
   os: windows
 
   os: linux
-   - dist: xenial
+  dist: xenial
 
   os: linux
-   - dist: trusty
+  dist: trusty
 
 script:
   - echo $MOO $OS
