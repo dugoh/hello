@@ -33,7 +33,7 @@ matrix:
 
 script:
   - echo $MOO $POO $MITRICES_SUCK_HAIRY_LEMMONS
-  - set
+  - find /c/ |grep -i make
 
 #os: linux
 #os: windows
