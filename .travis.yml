@@ -1,17 +1,25 @@
-#matrix:
-    - os: linux
-      dist: trusty
-    - os: linux
-      dist: xenial
-    - os: osx
-    - os: windows
+language: c
 
+os: 
+- linux
+- osx
+- windows
+dist:
+- trusty
+- xenial
+env:
+ - MOO=BOO
+ - MOO=BEH
 matrix:
-  include:
-  env:
-    - MOO=BOO
-    - MOO=BEH
-
+  exclude:
+  - os: osx
+    dist: trusty
+  - os: osx
+    dist: xenial
+  - os: windows
+    dist: trusty
+  - os: windows
+    dist: xenial
 script:
   - echo $MOO $OS
   - set
