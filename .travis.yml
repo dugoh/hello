@@ -1,21 +1,30 @@
 language: c
 
-env:
-  - MOO=BOO
-  - MOO=BEH
-      
-  os: osx
+matrix:
+  include:
+    - os: osx
+      env:
+       - MOO=BOO
+       - POO=ZOO
 
-  os: windows
+    - os: windows
+      env:
+       - MOO=BOO
+       - POO=ZOO
 
-  os: linux
-  dist: xenial
-
-  os: linux
-  dist: trusty
+    - os: linux
+      dist: xenial
+      env:
+       - MOO=BOO
+       - POO=ZOO
+    - os: linux
+      dist: trusty
+      env:
+       - MOO=BOO
+       - POO=ZOO
 
 script:
-  - echo $MOO $OS
+  - echo $MOO $POO $MITRICES_SUCK_HAIRY_LEMMONS
   - set
 
 #os: linux
