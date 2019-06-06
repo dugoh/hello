@@ -7,9 +7,10 @@
     - os: windows
 
 matrix:
-env:
-  - MOO=BOO
-  - MOO=BEH
+  include:
+  env:
+    - MOO=BOO
+    - MOO=BEH
 
 script:
   - echo $MOO $OS
