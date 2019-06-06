@@ -1,4 +1,4 @@
-matrix:
+#matrix:
     - os: linux
       dist: trusty
     - os: linux
