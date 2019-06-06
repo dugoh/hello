@@ -3,11 +3,13 @@ language: c
 matrix:
   include:
     - os: osx
+      osx_image: xcode9.4
       env:
        - MOO=BOO
        - POO=ZOO
 
-    - os: windows
+    - os: osx
+      osx_image: xcode10.2
       env:
        - MOO=BOO
        - POO=ZOO
@@ -17,8 +19,14 @@ matrix:
       env:
        - MOO=BOO
        - POO=ZOO
+       
     - os: linux
       dist: trusty
+      env:
+       - MOO=BOO
+       - POO=ZOO
+
+    - os: windows
       env:
        - MOO=BOO
        - POO=ZOO
