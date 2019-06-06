@@ -1,28 +1,18 @@
 language: c
 
-matrix:
-  include:
-  - os: osx
-    env:
-      - MOO=BOO
-      - MOO=BEH
+env:
+  - MOO=BOO
+  - MOO=BEH
+      
+  os: osx
 
-  - os: windows
-    env:
-      - MOO=BOO
-      - MOO=BEH
+  os: windows
 
-  - os: linux
-    dist: xenial
-    env:
-      - MOO=BOO
-      - MOO=BEH
+  os: linux
+   - dist: xenial
 
-  - os: linux
-    dist: trusty
-    env:
-      - MOO=BOO
-      - MOO=BEH
+  os: linux
+   - dist: trusty
 
 script:
   - echo $MOO $OS
