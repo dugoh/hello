@@ -35,10 +35,11 @@ script:
   - echo $MOO $POO $MATRICES_SUCK_HAIRY_LEMMONS
   - |
     (
-     git clone https://github.com/simh/simh.git
-     cd simh
+     set -Eeuo pipefail
      wget https://github.com/simh/windows-build/archive/windows-build.zip
      unzip windows-build.zip
+     git clone https://github.com/simh/simh.git
+     cd simh
      mingw32-make.exe vax
     )
 
