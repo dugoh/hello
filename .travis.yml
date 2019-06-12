@@ -40,7 +40,7 @@ script:
      unzip windows-build.zip
      git clone https://github.com/simh/simh.git
      cd simh
-     mingw32-make.exe vax
+     cmd /c build_mingw.bat
     )
 
   
