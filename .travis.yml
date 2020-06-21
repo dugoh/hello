@@ -41,6 +41,8 @@ script:
      git clone https://github.com/simh/simh.git
      cd simh
      cd "Visual Studio Projects"
+     pwd
+     find / |grep -i vcbuild
      cmd /c vcbuild /M%NUMBER_OF_PROCESSORS% /useenv /rebuild Simh.sln "Release|Win32"
     )
 
