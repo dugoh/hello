@@ -30,19 +30,18 @@ matrix:
       env:
        - MOO=BOO
        - POO="Windows"
+       - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
+
 
 script:
-  - echo $MOO $POO $MATRICES_SUCK_HAIRY_LEMMONS
-  - |
-    (
-     set -Eeuo pipefail
-     #wget https://github.com/simh/windows-build/archive/windows-build.zip
-     #unzip windows-build.zip
-     #git clone https://github.com/simh/simh.git
-     find /c/P* |egrep -i "vcbuild|vcvarsall|msbuild"
-     #cmd /c run.cmd
-    )
-
+  - echo $MOO $POO $MATRICES_SUCK_HAIRY_LEMMONS $PATH
+  - export PATH=$MSBUILD_PATH:$PATH
+  - echo $MOO $POO $MATRICES_SUCK_HAIRY_LEMMONS $PATH
+  - git clone https://github.com/simh/simh.git
+  - cd simh
+  - cd "Visual Studio Projects"
+  - msbuild Simh.sln
+  - echo done
   
 #os: linux
 #os: windows
