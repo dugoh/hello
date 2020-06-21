@@ -38,9 +38,9 @@ script:
      set -Eeuo pipefail
      #wget https://github.com/simh/windows-build/archive/windows-build.zip
      #unzip windows-build.zip
-     git clone https://github.com/simh/simh.git
-     #find /c/P* |egrep -i "vcbuild|vcvarsall"
-     cmd /c run.cmd
+     #git clone https://github.com/simh/simh.git
+     find /c/P* |egrep -i "vcbuild|vcvarsall|msbuild"
+     #cmd /c run.cmd
     )
 
   
