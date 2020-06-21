@@ -30,7 +30,7 @@ matrix:
       env:
        - MOO=BOO
        - POO="Windows"
-       - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
+       - MSBUILD_PATH="/c/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin"
 
 
 script:
@@ -40,7 +40,7 @@ script:
   - git clone https://github.com/simh/simh.git
   - cd simh
   - cd "Visual Studio Projects"
-  - msbuild Simh.sln
+  - msbuild.exe Simh.sln
   - echo done
   
 #os: linux
