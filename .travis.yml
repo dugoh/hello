@@ -36,11 +36,12 @@ script:
   - |
     (
      set -Eeuo pipefail
-     wget https://github.com/simh/windows-build/archive/windows-build.zip
-     unzip windows-build.zip
+     #wget https://github.com/simh/windows-build/archive/windows-build.zip
+     #unzip windows-build.zip
      git clone https://github.com/simh/simh.git
      cd simh
-     cmd /c build_mingw.bat
+     cd "Visual Studio Projects"
+     cmd /c vcbuild /M%NUMBER_OF_PROCESSORS% /useenv /rebuild Simh.sln "Release|Win32"
     )
 
   
