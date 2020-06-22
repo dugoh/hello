@@ -38,12 +38,13 @@ script:
   - echo $MOO $POO $MATRICES_SUCK_HAIRY_LEMMONS
   - git clone https://github.com/simh/simh.git
   - cd simh
-  - #mkdir BIN
+  - mkdir BIN
   - #sh cmd /c echo blah
   - #powershell -Command cmd /c echo blah2
-  - cmd.exe /C build_mingw.bat BuildROMs VAX
+  - #cmd.exe /C build_mingw.bat BuildROMs VAX
   - #powershell -Command cmd /c mingw32-make -f makefile BuildROMs VAX
   - #echo done 0
+  - mingw32-make -f makefile BuildROMs VAX
   - ls -ltr $(find ./ -type f)
   - echo done 1
   
