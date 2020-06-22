@@ -3,7 +3,7 @@ git clone https://github.com/simh/simh.git
 #cd "simh\Visual Studio Projects"
 #vcbuild /M%NUMBER_OF_PROCESSORS% /useenv /rebuild Simh.sln "Release|Win32"
 cd simh
-build_vstudio.bat VAX
+build_vstudio.bat BuildROMs VAX
 echo done1
 dir /s /b *.exe
 echo done2
