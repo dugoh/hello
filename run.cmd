@@ -16,3 +16,6 @@ echo ++++++++++ done4
 SET OPATH=%PATH%
 SET PATH=c:\MinGW\bin;c:\MinGW\usr\bin;%OPATH%
 gcc -o hello.exe hello.c
+echo ++++++++++ done5
+hello.exe
+echo ++++++++++ done6
