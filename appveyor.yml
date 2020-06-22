@@ -1,0 +1,8 @@
+platform:
+  - x86
+cache:
+  - ../windows-build
+before_build:
+  "\"C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\vcvarsall.bat\""
+build_script:
+  cmd: run.cmd
