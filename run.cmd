@@ -12,3 +12,6 @@ dir /s /b *.exe
 echo done3
 cd ..
 dir /s /b *.exe
+ECHO done4
+PWD
+DIR C:\projects\hello\simh\BIN\NT\Win32-Release\
