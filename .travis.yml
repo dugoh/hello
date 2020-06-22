@@ -40,7 +40,10 @@ script:
   - echo $MOO $POO $MATRICES_SUCK_HAIRY_LEMMONS
   - git clone https://github.com/simh/simh.git
   - cd simh
-  - cmd /c build_mingw.bat BuildROMs VAX
+  - mkdir BIN
+  - cmd /c echo blah
+  - #cmd /c build_mingw.bat BuildROMs VAX
+  - cmd /c mingw32-make -f makefile BuildROMs VAX
   - echo done 0
   - ls -ltr $(find ./ -type f)
   - echo done 1
