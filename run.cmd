@@ -1,4 +1,6 @@
 REM this is dos, right!?
+gcc -o hello.exe hello.c 
+hello.exe
 git clone https://github.com/simh/simh.git
 REM cd "simh\Visual Studio Projects"
 REM vcbuild /M%NUMBER_OF_PROCESSORS% /useenv /rebuild Simh.sln "Release|Win32"
