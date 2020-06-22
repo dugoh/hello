@@ -42,9 +42,9 @@ script:
   - cd simh
   - mkdir BIN
   - sh cmd /c echo blah
-  - sh cmd /c echo blah2
+  - powershell -Command cmd /c echo blah2
   - #cmd /c build_mingw.bat BuildROMs VAX
-  - sh cmd /c mingw32-make -f makefile BuildROMs VAX
+  - powershell -Command cmd /c mingw32-make -f makefile BuildROMs VAX
   - echo done 0
   - ls -ltr $(find ./ -type f)
   - echo done 1
