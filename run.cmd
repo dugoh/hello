@@ -12,4 +12,7 @@ echo ++++++++++ done3
 cd ..
 copy C:\projects\hello\simh\BIN\NT\Win32-Release\MicroVAX3900.exe .\
 echo sh ver| microvax3900
-bash.exe -c 'echo sh ver| ./microvax3900'
+echo ++++++++++ done4
+SET OPATH=%PATH%
+SET PATH=c:\MinGW\bin;c:\MinGW\usr\bin;%OPATH%
+gcc -o hello.exe hello.c
