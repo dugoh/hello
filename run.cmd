@@ -1,9 +1,7 @@
-echo +++ before +++
-set
-"c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"
-echo +++ after +++
-set
+git clone https://github.com/simh/simh.git
 cd simh
-cd "Visual Studio Projects"
+"Visual Studio Projects"
 vcbuild /M%NUMBER_OF_PROCESSORS% /useenv /rebuild Simh.sln "Release|Win32"
-echo done
+echo done1
+echo done2
+echo done3
