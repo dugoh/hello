@@ -27,6 +27,7 @@ matrix:
 #       - POO="Linux trusty"
 #
     - os: windows
+      filter_secrets: false
       env:
        - MOO=BOO
        - POO="Windows"
