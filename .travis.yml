@@ -42,6 +42,7 @@ script:
   - cd simh
   - mkdir BIN
   - cmd /c echo blah
+  - cmd /c echo blah2
   - #cmd /c build_mingw.bat BuildROMs VAX
   - cmd /c mingw32-make -f makefile BuildROMs VAX
   - echo done 0
