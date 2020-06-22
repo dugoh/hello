@@ -10,4 +10,6 @@ dir /s /b *.exe
 echo done3
 cd ..
 dir /s /b *.exe
+bash ls
+bash wget --help
 
