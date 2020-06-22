@@ -5,7 +5,7 @@ cache:
 skip_commits:
   files:
     - .travis.yml
-before_build:
-  "\"C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\vcvarsall.bat\""
+#before_build:
+#  "\"C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\vcvarsall.bat\""
 build_script:
   cmd: run.cmd
