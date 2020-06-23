@@ -19,3 +19,5 @@ gcc -o hello.exe hello.c
 echo ++++++++++ done5
 hello.exe
 echo ++++++++++ done6
+perl -e 'print "hello world!\n"'
+echo ++++++++++ done7
